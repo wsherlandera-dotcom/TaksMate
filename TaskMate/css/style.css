@@ -1,0 +1,416 @@
+/* =========================
+RESET
+========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+    color:#333;
+    line-height:1.6;
+}
+
+/* =========================
+NAVBAR
+========================= */
+nav{
+    background:#4f46e5;
+    color:#fff;
+    padding:18px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+nav h2{
+    font-size:24px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:15px;
+}
+
+nav a:hover{
+    opacity:.9;
+}
+
+/* =========================
+CONTAINER
+========================= */
+.container{
+    max-width:1100px;
+    margin:40px auto;
+    padding:0 20px;
+}
+
+/* =========================
+CARD
+========================= */
+.card{
+    background:white;
+    border-radius:16px;
+    padding:25px;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+    margin-bottom:25px;
+}
+
+.card h2,
+.card h3{
+    color:#1e293b;
+    margin-bottom:15px;
+}
+
+/* =========================
+HOME PAGE
+========================= */
+.hero{
+    padding:90px 20px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:20px;
+    color:#1e293b;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    margin-bottom:25px;
+    color:#64748b;
+}
+
+.button-group{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+}
+
+.btn{
+    background:#4f46e5;
+    color:white;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:10px;
+    font-weight:600;
+}
+
+.btn:hover{
+    opacity:.9;
+}
+
+/* =========================
+SURVEY PAGE
+========================= */
+
+.survey-card{
+    text-align:center;
+    padding:40px;
+}
+
+.survey-card h2{
+    font-size:36px;
+    margin-bottom:25px;
+}
+
+.survey-text{
+    max-width:700px;
+    margin:0 auto 20px;
+    text-align:center;
+    color:#64748b;
+    line-height:1.9;
+    font-size:16px;
+}
+
+.survey-card .btn{
+    display:inline-block;
+    margin-top:15px;
+}
+
+.card ul{
+    list-style:none;
+}
+
+.card ul li{
+    background:#f8fafc;
+    border:1px solid #e2e8f0;
+    border-radius:10px;
+    padding:15px;
+    margin-bottom:12px;
+}
+
+.features{
+    max-width:1100px;
+    margin:auto;
+    padding:40px 20px 60px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+/* =========================
+FORM
+========================= */
+input,
+select{
+    width:100%;
+    padding:12px;
+    border:1px solid #dbe2ea;
+    border-radius:10px;
+    font-size:14px;
+    margin-bottom:12px;
+}
+
+input:focus,
+select:focus{
+    border-color:#4f46e5;
+    outline:none;
+}
+
+button{
+    background:#4f46e5;
+    color:white;
+    border:none;
+    border-radius:10px;
+    padding:12px 20px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+button:hover{
+    background:#4338ca;
+}
+
+/* =========================
+DASHBOARD
+========================= */
+.dashboard-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+}
+
+.stats{
+    display:grid;
+    gap:12px;
+}
+
+.stat-box{
+    background:#eef2ff;
+    border-radius:12px;
+    padding:18px;
+    text-align:center;
+}
+
+.stat-box h3{
+    font-size:30px;
+    color:#4f46e5;
+}
+
+.stat-box p{
+    color:#64748b;
+}
+
+.progress-section{
+    margin-top:20px;
+}
+
+.progress{
+    width:100%;
+    height:18px;
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+#progressBar{
+    width:0%;
+    height:100%;
+    background:#4f46e5;
+    transition:.3s;
+}
+
+#progressText{
+    margin-top:8px;
+    font-weight:bold;
+}
+
+#taskList{
+    margin-top:15px;
+    list-style:none;
+}
+
+#taskList li{
+    background:#f8fafc;
+    border:1px solid #e2e8f0;
+    border-radius:10px;
+    padding:15px;
+    margin-bottom:12px;
+}
+
+.task-buttons{
+    display:flex;
+    gap:10px;
+    margin-top:10px;
+}
+
+.task-buttons button{
+    flex:1;
+}
+
+.task-completed{
+    opacity:.7;
+}
+
+.task-completed strong{
+    text-decoration:line-through;
+}
+
+.priority-high{
+    color:#dc2626;
+    font-weight:bold;
+}
+
+.priority-medium{
+    color:#f59e0b;
+    font-weight:bold;
+}
+
+.priority-low{
+    color:#16a34a;
+    font-weight:bold;
+}
+
+/* =========================
+SCHEDULE
+========================= */
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    margin-bottom:15px;
+}
+
+.form-grid input,
+.form-grid select{
+    margin-bottom:0;
+}
+
+.week-subtitle{
+    color:#64748b;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+#weeklySchedule{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:12px;
+}
+
+.week-card{
+    background:#eef2ff;
+    border-radius:12px;
+    padding:12px;
+    min-height:180px;
+}
+
+.week-card h3{
+    color:#4f46e5;
+    font-size:16px;
+    margin-bottom:3px;
+}
+
+.week-date{
+    font-size:12px;
+    color:#64748b;
+    margin-bottom:10px;
+}
+
+.week-item{
+    background:white;
+    border-radius:10px;
+    padding:10px;
+    margin-bottom:8px;
+    box-shadow:0 2px 6px rgba(0,0,0,.05);
+    font-size:12px;
+}
+
+.week-item strong{
+    display:block;
+    margin-bottom:4px;
+    color:#1e293b;
+}
+
+.week-item button{
+    width:100%;
+    padding:6px;
+    margin-top:8px;
+    font-size:11px;
+}
+
+.empty-day{
+    color:#94a3b8;
+    font-size:12px;
+}
+
+.today-card{
+    border:2px solid #4f46e5;
+    background:#e0e7ff;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+@media(max-width:1200px){
+
+    #weeklySchedule{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    nav{
+        padding:15px 20px;
+    }
+
+    .hero{
+        padding:60px 20px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .dashboard-grid{
+        grid-template-columns:1fr;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    #weeklySchedule{
+        grid-template-columns:1fr;
+    }
+
+    .container{
+        padding:0 15px;
+    }
+
+}
