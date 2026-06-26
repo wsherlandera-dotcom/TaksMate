@@ -1,0 +1,71 @@
+/* =========================
+SURVEY
+========================= */
+
+.survey-card{
+    padding:40px;
+    text-align:center;
+}
+
+.survey-card h2{
+    font-size:36px;
+    color:#1e293b;
+    margin-bottom:25px;
+}
+
+.survey-text{
+    max-width:700px;
+    margin:0 auto 20px;
+    color:#64748b;
+    text-align:center;
+    line-height:1.9;
+    font-size:16px;
+    overflow-wrap:break-word;
+    word-break:break-word;
+}
+
+.survey-card .btn{
+    display:inline-block;
+    margin-top:15px;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media (max-width:768px){
+
+    .survey-card{
+        padding:30px 20px;
+    }
+
+    .survey-card h2{
+        font-size:30px;
+    }
+
+    .survey-text{
+        font-size:15px;
+        line-height:1.8;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .survey-card{
+        padding:25px 15px;
+    }
+
+    .survey-card h2{
+        font-size:26px;
+    }
+
+    .survey-text{
+        font-size:14px;
+    }
+
+    .survey-card .btn{
+        width:100%;
+    }
+
+}
