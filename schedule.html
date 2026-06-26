@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Kuliah - TaskMate</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/schedule.css">
+    
+</head>
+<body>
+
+    <nav>
+        <h2>📚 TaskMate</h2>
+
+        <div>
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <!-- FORM TAMBAH JADWAL -->
+        <div class="card">
+
+            <h2>Tambah Jadwal Kuliah</h2>
+
+            <div class="form-grid">
+
+                <input
+                    type="text"
+                    maxlength="15"
+                    id="courseName"
+                    placeholder="Nama Mata Kuliah">
+
+                <select id="courseDay">
+                    <option value="Senin">Senin</option>
+                    <option value="Selasa">Selasa</option>
+                    <option value="Rabu">Rabu</option>
+                    <option value="Kamis">Kamis</option>
+                    <option value="Jumat">Jumat</option>
+                    <option value="Sabtu">Sabtu</option>
+                </select>
+            <div class="time-group">
+                <label for="endTime">Mulai</label>
+                <input
+                    type="time"
+                    id="startTime">
+            </div>                
+
+            <div class="time-group">
+                <label for="endTime">Selesai</label>
+                <input
+                    type="time"
+                    id="endTime">
+            </div>
+
+                <input
+                    type="text"
+                    maxlength="3"
+                    id="room"
+                    placeholder="Ruangan">
+
+                <input
+                    type="text"
+                    maxlength="40"
+                    id="lecturer"
+                    placeholder="Nama Dosen"
+                    pattern="[A-Za-zÀ-ÿ\s.]+"
+                    title="Hanya boleh berisi huruf"
+                    oninput="this.value=this.value.replace(/[^A-Za-zÀ-ÿ\s.]/g,'')">
+
+            </div>
+
+            <button
+                class="schedule-btn"
+                onclick="addSchedule()">
+                Tambah Jadwal
+            </button>
+
+        </div>
+
+        <!-- JADWAL MINGGUAN -->
+        <div class="card schedule-section">
+
+            <h2>📅 Jadwal Minggu Ini</h2>
+
+            <p class="week-subtitle">
+                Semua jadwal kuliah dalam satu tampilan mingguan.
+            </p>
+
+            <div id="weeklySchedule">
+
+                <!-- Akan diisi otomatis oleh schedule.js -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/schedule.js"></script>
+
+</body>
+</html>
