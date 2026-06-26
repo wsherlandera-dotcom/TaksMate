@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dashboard TaskMate</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<nav>
+    <h2>📚 TaskMate</h2>
+
+
+<div>
+    <a href="index.html">Home</a>
+    <a href="schedule.html">Jadwal Kuliah</a>
+</div>
+
+
+</nav>
+
+<div class="container">
+
+<div class="dashboard-grid">
+
+    <div>
+
+        <div class="card">
+
+            <h2>Tambah Tugas</h2>
+
+
+            <label for="taskName">Nama Tugas</label>
+            <input
+                type="text"
+                maxlength="20"
+                id="taskName"
+                placeholder="Nama tugas">
+
+
+            <label for="taskDate">Tanggal Pengumpulan</label>
+            <div class="date-wrapper">
+                <input
+                    type="date"
+                    id="taskDate">
+            </div>
+
+
+            <label for="taskPriority">Tingkat Prioritas</label>    
+            <select id="taskPriority">
+                <option value="Tinggi">Tinggi</option>
+                <option value="Sedang" selected>Sedang</option>
+                <option value="Rendah">Rendah</option>
+            </select>
+
+            <button onclick="addTask()">
+                Tambah Tugas
+            </button>
+
+        </div>
+
+        <div class="card" style="margin-top:25px;">
+
+            <h2>Daftar Tugas</h2>
+
+            <input
+            type="text"
+            id="searchTask"
+            placeholder="Cari tugas..."
+            onkeyup="renderTasks()">
+
+            <p class="task-info">
+                ✅ Tugas yang sudah selesai akan terhapus otomatis setelah 24 jam.
+            </p>
+
+            <ul id="taskList"></ul>
+
+        </div>
+
+    </div>
+
+    <div>
+
+       <div class="card">
+
+    <h2>Statistik</h2>
+
+        <div class="stats">
+
+            <div class="stat-box">
+                <h3 id="totalTask">0</h3>
+                <p>Total Tugas</p>
+            </div>
+
+            <div class="stat-box">
+                <h3 id="completedTask">0</h3>
+                <p>Selesai</p>
+            </div>
+
+            <div class="stat-box">
+                <h3 id="pendingTask">0</h3>
+                <p>Belum Selesai</p>
+            </div>
+
+        </div>
+
+        <div class="progress-section">
+
+            <h3>Produktivitas</h3>
+
+            <div class="progress">
+                <div id="progressBar"></div>
+            </div>
+
+            <p id="progressText">0%</p>
+
+        </div>
+
+    </div>
+    </div>
+
+    
+
+</div>
+
+
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
